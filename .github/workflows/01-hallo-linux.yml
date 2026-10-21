@@ -21,3 +21,12 @@ jobs:
 
       - name: Welches System läuft hier?
         run: uname -a
+
+      - name: Name ausgeben
+        run: echo "Mein Name ist Christina"
+
+      - name: Datum ausgeben
+        rum: date +%Y-%m-%d
+
+      - name: Kernel-Version ausgeben
+        rum: uname -r 
