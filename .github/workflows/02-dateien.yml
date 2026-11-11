@@ -1,3 +1,4 @@
+
 # Linux CI — Beispielcode
 # Lizenz: MIT (siehe LICENSE-CODE.txt im Kurs-Repository)
 name: 02 - Dateien und Ordner
@@ -38,15 +39,12 @@ jobs:
           echo "Butter" >> arbeit/liste.txt
           cat arbeit/liste.txt
 
+          mkdir -p testordner-p
+          mkdir -p testordner-p
+          echo "Beide mkdir-Befehle wurden erfolgreich ausgeführt."
+
       - name: Temporäre Datei löschen
         run: |
           rm arbeit/notizen.txt
           echo "--- nach dem Löschen ---"
           ls arbeit
-
-      - name: Wiederholtes mkdir ohne -p testen
-        continue-on-error: true
-        run: |
-          mkdir testordner
-          mkdir testordner
-          echo "Dieser Befehl wird nach dem Fehler nicht ausgeführt"
